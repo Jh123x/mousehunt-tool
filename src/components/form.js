@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 
 
-export default function Form({onSubmit}) {
+export default function Form({ onSubmit }) {
     const [state, setState] = useState({
         itemValue: 114,
         username: '',
@@ -29,11 +29,12 @@ export default function Form({onSubmit}) {
         <FormGroup onSubmit={(e) => e.preventDefault()}>
             <FormControl>
                 <InputLabel id='hg-token'>Enter your Username</InputLabel>
-                <Input placeholder='HGToken' name='username' value={state.username} onChange={onFormChange('username')} />
+                <Input placeholder='Username' name='username' value={state.username} onChange={onFormChange('username')} />
             </FormControl>
+            <br />
             <FormControl>
                 <InputLabel id='hg-token'>Enter your Password</InputLabel>
-                <Input placeholder='HGToken' name='password' type="password" value={state.password} onChange={onFormChange('password')} />
+                <Input name='password' type="password" value={state.password} onChange={onFormChange('password')} />
             </FormControl>
             <br />
             <FormControl fullWidth  >
